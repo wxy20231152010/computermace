@@ -1,0 +1,84 @@
+﻿*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background:url(6.jpg);
+}
+.wrap{
+    width:100%;
+    height:100vh;
+    background:url(6.jpg) no-repeat;
+    display:flex;
+}
+
+.card{
+    width:600px;
+    height:350px;
+    position:relative;
+}
+
+.rolebg{
+    width:600px;
+    height:800px;
+    border-radius:100px;
+    overflow:hidden;
+    box-shadow:0px 0px 30px 20px rgba(255,255,255,0.05);
+    transform-origin:bottom;
+    transition:2s;
+}
+.rolebg img{
+    width:200%;
+    height:200%;
+    object-fit:cover;
+}
+
+.role {
+    width: 440px;
+    height: 230px;
+    position: absolute;
+    top:580px;
+    bottom: 0px;
+    transform-origin: bottom;
+    transition: 2s;
+}
+.role img{
+    width:100%;
+    height:100%;
+}
+
+.content{
+    width:440px;
+    padding:10px;
+    color:azure;
+    position:absolute;
+    bottom:-50px;
+    opacity:0;
+    transition:2s;
+}
+
+.content h1{
+    font-weight:400;
+
+}
+
+.content p {
+        font-weight: 400;
+        padding-top:10px;
+        font-size:14px;
+}
+
+.card:hover .rolebg{
+    transform:perspective(1000px) rotateX(30deg) 
+    skewX(-20deg);
+}
+
+.card:hover .role {
+    transform: scale(1.3);
+}
+
+.card:hover .content {
+    opacity:1;
+    transform:translateY(120px);
+}
